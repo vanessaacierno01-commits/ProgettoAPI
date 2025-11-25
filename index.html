@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Prodotti Tecnologici</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background: #0f0f1a;
+color: #fff;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+h1 {
+color: #0ff;
+text-align: center;
+margin-bottom: 40px;
+font-size: 2.8em;
+text-shadow: 0 0 8px #0ff, 0 0 15px #0ff;
+}
+
+#products {
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+justify-content: center;
+}
+
+.product {
+background: rgba(0, 0, 0, 0.7);
+border: 2px solid #0ff;
+border-radius: 20px;
+padding: 20px;
+max-width: 300px;
+box-shadow: 0 0 15px #0ff, 0 0 30px #0ff inset;
+transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.product:hover {
+transform: translateY(-10px);
+box-shadow: 0 0 25px #0ff, 0 0 50px #0ff inset;
+border-color: #ff0;
+}
+
+.product img {
+width: 180px;
+height: 180px;
+object-fit: contain;
+margin-bottom: 15px;
+transition: transform 0.3s, box-shadow 0.3s;
+border-radius: 10px;
+border: 1px solid #0ff;
+box-shadow: 0 0 10px #0ff;
+}
+
+.product img:hover {
+transform: scale(1.1) rotate(3deg);
+box-shadow: 0 0 20px #ff0, 0 0 40px #0ff;
+}
+
+.product h2 {
+font-size: 1.3em;
+color: #0ff;
+margin-bottom: 10px;
+text-shadow: 0 0 5px #0ff;
+}
+
+.product p {
+font-size: 0.95em;
+color: #ccc;
+line-height: 1.4;
+}
+
+.product p strong {
+color: #ff0;
+}
+
+.btn-buy {
+margin-top: 15px;
+padding: 10px 20px;
+font-size: 0.95em;
+font-weight: bold;
+color: #000;
+background: linear-gradient(45deg, #0ff, #ff0);
+border: none;
+border-radius: 12px;
+cursor: pointer;
+transition: transform 0.3s, box-shadow 0.3s;
+text-shadow: none;
+}
+
+.btn-buy:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px #0ff, 0 0 30px #ff0;
+}
+
+@media (max-width: 768px) {
+#products {
+flex-direction: column;
+align-items: center;
+}
+}
+
+</style>
+</head>
+
+<body>
+<h1>Prodotti Tecnologici</h1>
+<div id="cart">
+    <h2>Carrello</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Totale:</strong></p> $<span id="cart-total">0</span></p>
+</div>
+<div id="products"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
